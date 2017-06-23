@@ -70,9 +70,9 @@ Note that the year variable used for color mapping is treated as a continuous va
 data(tidfit)
 
 # plot using defaults, 
-# defaults to the fiftieth quantile for July for all years
+# defaults to the fiftieth quantile for all years
 dynaplot(tidfit)
-
+\dontrun{
 # change the defaults
 dynaplot(tidfit, tau = 0.9, month = 2, years = seq(1980, 1990), 
  col_vec = rainbow(7), alpha = 0.5, size = 3) 
@@ -82,7 +82,7 @@ data(tidfitmean)
 
 dynaplot(tidfitmean)
 }
+}
 \seealso{
 \code{\link{fitplot}}, \code{\link{gridplot}}, \code{\link{prdnrmplot}}
 }
-
