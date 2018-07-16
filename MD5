@@ -1,5 +1,5 @@
-834b1cb59dec5d4f504a55818766e625 *DESCRIPTION
-d7b380a99a7ff663b1ab13dbec277789 *NAMESPACE
+854a6208950cef345e30f34bd7370286 *DESCRIPTION
+bc27047e48285b1d893a556b8f557549 *NAMESPACE
 ea8135bd35df365decba2c96ec7ff42d *R/aiccrq.R
 785638a7fd287668b25b1885ceb42ecf *R/all_sims.R
 d48e7487f7201bc97fe23c5733d78524 *R/annual_agg.R
@@ -15,10 +15,12 @@ af42f22bb3ab1f77e4b68a085e3840d8 *R/fillpo.R
 fa7b4a082f466690e9cb5e802ba8bfc8 *R/fitmoplot.R
 3cc394aa56a6052be2af5085fb9a3347 *R/fitplot.R
 42143cc1a8270d195ac11eb9e4565b4d *R/getwts.R
-c921d4d1ff9394b64ee0d665b5a19e4d *R/globalVariables.R
+e65764d27b74bc1f4a76328809464398 *R/globalVariables.R
 124d77109ddb8c59af16db12cf909c78 *R/goodfit.R
 98ed8b9bf0e3f6e82e82e0475c9718f0 *R/gradcols.R
 34ae150c69331e4af4074146ecc51d1d *R/gridplot.R
+48de6dfdebd692ecce7bbbfab0fa2d9f *R/kendallSeasonalTrendTest.R
+9974acc9d8b77d74fdc50713185de691 *R/kendallTrendTest.R
 8ab30c84f7fb0262cdea3e77cf16d3e3 *R/lnQ_sim.R
 d1efb3b34a1a9ebc03d8ec84c8e6d981 *R/lnres_err.R
 315372d557951cbe28aba80bc2d2859c *R/lnres_sim.R
@@ -47,7 +49,7 @@ cfa92fddd4efd1de870155d06771813f *R/wrtdscv.R
 5a7f222377ab5fde2083718f65dccfc5 *R/wrtdsperf.R
 4f37899100c3c265a2afff181ee61b7e *R/wrtdsrsd.R
 a719877f6e0693b84b51b1799df36af8 *R/wrtdstrnd.R
-ab2cf1b88afdb058a448466291161be1 *R/wrtdstrnd_sk.R
+87156220ace592168504f38c47f2c90e *R/wrtdstrnd_sk.R
 5278822ca3cde12b11d89d603a13ad04 *R/wtsplot.R
 89601a8b71430ef70df79ea5e4ad14d9 *data/chldat.RData
 3816cf25699c7ffc615384097b5eee22 *data/daydat.RData
@@ -73,6 +75,8 @@ b4a2f7548f718a40b6818bed2cda0eff *man/getwts.Rd
 a08047ea034e65c333b8fae9ad901195 *man/goodfit.Rd
 ee5bba9bcc70510eacd74f959d430237 *man/gradcols.Rd
 7c6ef0513e4c1e93d8164835a7c2e3cf *man/gridplot.Rd
+94500e247b221f841c96a6aa69d2ad6f *man/kendallSeasonalTrendTest.Rd
+48cfd869d8a00b94e5c14f75a3574928 *man/kendallTrendTest.Rd
 7e02b95e1355d692e9f14ded0939550c *man/lnQ_sim.Rd
 8e5e690a5be05526972936c210ee5cf5 *man/lnres_err.Rd
 a4646f386a20c969f6dd353ba1bbe901 *man/lnres_sim.Rd
@@ -101,5 +105,5 @@ f0baa117e30c356c7e6339f67709bbe9 *man/wrtdscv.Rd
 efa3ff61e653db3dbbb72520a1efc13f *man/wrtdsperf.Rd
 a0536e4c911e26f1ebba9f11961642cf *man/wrtdsrsd.Rd
 1b0610de146c8774276063407837a23b *man/wrtdstrnd.Rd
-f411df397a38705d07fd95e3ddb1c2d4 *man/wrtdstrnd_sk.Rd
+deb904e28824c01361681cc0454d40e2 *man/wrtdstrnd_sk.Rd
 05931250f5e3fab5cf305a79a85ddbb5 *man/wtsplot.Rd
