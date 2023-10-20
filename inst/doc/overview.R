@@ -1,20 +1,20 @@
-## ---- include = FALSE----------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 
-## ---- eval = T, message = F, warning = F---------------------------------
+## ----eval = T, message = F, warning = F---------------------------------------
 library(WRTDStidal)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 # import data
 data(chldat)
 
 # data format
 str(chldat)
 
-## ----eval = F------------------------------------------------------------
+## ----eval = F-----------------------------------------------------------------
 #  # load a fitted model, quantiles
 #  data(tidfit)
 #  
@@ -27,14 +27,14 @@ str(chldat)
 #  # or recreate the mean model from chldat
 #  tidfitmean <- modfit(chldat, resp_type = 'mean')
 
-## ----fig.height = 6, fig.width = 8---------------------------------------
+## ----fig.height = 6, fig.width = 8--------------------------------------------
 # create a tidal object from a data frame, or use tidalmean function
 tidobj <- tidal(chldat)
 
 # plot the raw data
 obsplot(tidobj)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 # data
 head(tidobj)
 
@@ -51,14 +51,14 @@ head(tidfit)
 names(attributes(tidfit))
 
 
-## ----message = FALSE, cache = TRUE---------------------------------------
+## ----message = FALSE, cache = TRUE--------------------------------------------
 # get wrtds results, quantile model
 mod <- modfit(chldat)
 
 # get wrtds mean model
 mod <- modfit(chldat, resp_type = 'mean')
 
-## ----message = FALSE, eval = FALSE---------------------------------------
+## ----message = FALSE, eval = FALSE--------------------------------------------
 #  # this is equivalent to running modfit
 #  # modfit is a wrapper for tidal, wrtds, respred, and resnorm functions
 #  
@@ -77,7 +77,7 @@ mod <- modfit(chldat, resp_type = 'mean')
 #    respred %>% # get predictions from grids
 #    resnorm # get normalized predictions from grids
 
-## ----eval = FALSE--------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  ## fit the model and get predicted/normalized chlorophyll data
 #  # default median fit, quantile model
 #  # grids predicted across salinity range with ten values
@@ -93,7 +93,7 @@ mod <- modfit(chldat, resp_type = 'mean')
 #  ## suppress console output
 #  mod <- modfit(chldat, trace = FALSE)
 
-## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE------------------
 # load data from the package for the example
 data(tidfit)
 
@@ -103,39 +103,39 @@ fitplot(tidfit)
 # plot non-aggregated results
 fitplot(tidfit, annuals = FALSE)
 
-## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE------------------
 # plot january, july as defaults
 sliceplot(tidfit)
 
-## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE------------------
 # fits by month, normalized
 fitmoplot(tidfit, predicted = F)
 
-## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE------------------
 seasplot(tidfit)
 
-## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE------------------
 seasyrplot(tidfitmean, predicted = F)
 
-## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=4, fig.width=8, message=FALSE, warning=FALSE------------------
 # plot predicted, normalized results for each quantile
 prdnrmplot(tidfit)
 
 # plot as monthly values
 prdnrmplot(tidfit, annuals = FALSE)
 
-## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE------------------
 # plot using defaults
 # defaults to the fiftieth quantile
 dynaplot(tidfit)
 
-## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE------------------
 # create a gridded plot
 # defaults to the fiftieth quantile
 gridplot(tidfit)
 gridplot(tidfit, month = 'all')
 
-## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE-------------
+## ----fig.height=6, fig.width=8, message=FALSE, warning=FALSE------------------
 library(dplyr)
 library(plotly)
 
@@ -157,15 +157,15 @@ p <- plot_ly(z = ~dat) %>%
   layout(scene = scene)
 p
 
-## ----fig.height=7, fig.width=7, message=FALSE, warning=FALSE-------------
+## ----fig.height=7, fig.width=7, message=FALSE, warning=FALSE------------------
 # wt plot
 wtsplot(tidfit, ref = '1995-07-01')
 
-## ----fig.height=3, fig.width=5, message=FALSE, warning=FALSE-------------
+## ----fig.height=3, fig.width=5, message=FALSE, warning=FALSE------------------
 # create a nobsplot
 nobsplot(tidfit)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 wrtdsperf(tidfit)
 # setup month, year categories for trend summaries
 mobrks <- list(c(1, 2, 3), c(4, 5, 6), c(7, 8, 9), c(10, 11, 12))
@@ -174,6 +174,6 @@ molabs <- c('JFM', 'AMJ', 'JAS', 'OND')
 yrlabs <- c('1974-1985', '1986-1994', '1995-2003', '2004-2012')
 wrtdstrnd(tidfit, mobrks, yrbrks, molabs, yrlabs)
 
-## ------------------------------------------------------------------------
+## -----------------------------------------------------------------------------
 wrtdstrnd_sk(tidfit, mobrks, yrbrks, molabs, yrlabs)
 
